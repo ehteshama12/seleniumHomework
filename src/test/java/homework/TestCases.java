@@ -238,19 +238,19 @@ public class TestCases {
 	action.moveToElement(employeeList).click().build().perform();
 	Thread.sleep(1000);
 	
-	WebElement idField = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/input"));
-	
+	WebElement idField = driver.findElement(By.xpath("//div[@class='oxd-grid-4 orangehrm-full-width-grid']/div[2]//div[2]//input"));
+
 	idField.sendKeys("0016");
 	
-	WebElement empStatus = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[2]/i"));
+	WebElement empStatus = driver.findElement(By.xpath("//div[@class='oxd-grid-4 orangehrm-full-width-grid']/div[3]"));
 	empStatus.click();
 	
-	WebElement fullTimePerm = driver.findElement(By.xpath("//*[contains(text(),'Full-Time Permanent')]"));
-	
-	action.moveToElement(fullTimePerm).click().build().perform();
+	driver.findElement(By.xpath("//div[@role='listbox']//*[contains(text(),'Full-Time Permanent')]")).click();
 	Thread.sleep(1000);
 
-	WebElement include = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div/div[2]/i"));
+	WebElement include = driver.findElement(By.xpath("//div[@class='oxd-grid-4 orangehrm-full-width-grid']/div[4]"));
+	
+	driver.findElement(By.xpath("//div[@class='oxd-grid-4 orangehrm-full-width-grid']/div[4]"));
 	
 	include.click();
 	
@@ -259,7 +259,7 @@ public class TestCases {
 	action.moveToElement(currAndPastEmp).click().build().perform();
 	Thread.sleep(1000);
 		
-	WebElement subUnit = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[7]/div/div[2]/div/div/div[2]/i"));
+	WebElement subUnit = driver.findElement(By.xpath("//div[@class='oxd-grid-4 orangehrm-full-width-grid']/div[7]"));
 	
 	action.moveToElement(subUnit).click().build().perform();
 	Thread.sleep(1000);
@@ -318,4 +318,5 @@ public class TestCases {
 	obj.assertAll();
 	
 	}
+	
 }
